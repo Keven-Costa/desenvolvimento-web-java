@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo de Tinta</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    
+    <!--Código CSS-->
+    <style>
+        .calc-container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        .btn-calculate {
+            background-color: #4b79cf;
+            border: none;
+            padding: 10px 25px;
+            transition: all 0.3s;
+        }
+        .btn-calculate:hover {
+            background-color: #3a5f9e;
+            transform: translateY(-2px);
+        }
+    </style>
+    
+    
+</head>
+<body>
+    <div class="container">
+        <div class="calc-container bg-white">
+            <h2 class="text-center mb-4">Calculadora de Tinta</h2>
+            
+            <form action="resultado.jsp" method="post">
+                <!-- Campo de Área -->
+                <div class="mb-3">
+                    <label for="metrosQuadrados" class="form-label">Área a ser pintada (m²)</label>
+                    <input type="number" 
+                           class="form-control" 
+                           id="metrosQuadrados" 
+                           name="metrosQuadrados" 
+                           step="0.01"
+                           min="0.1"
+                           required
+                           placeholder="Ex: 50.25">
+                    <div class="form-text">Informe a área total em metros quadrados</div>
+                </div>
+                <!-- Botão de Submit -->
+                <div class="d-grid">
+                    <button type="submit" class="btn btn-calculate text-white btn-lg">
+                        <i class="bi bi-calculator me-2"></i>Calcular Quantidade
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
